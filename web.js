@@ -4,12 +4,6 @@ var //pinboard = require('pinboard'),
 	express = require('express'),
 	server = express.createServer();
 
-server.all('/', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next();
- });
-
 server.get('*', function (req, res) {
     var header = req.headers['authorization'] || '',        // get the header
 	    token = header.split(/\s+/).pop() || '',            // and the encoded auth token
@@ -17,6 +11,11 @@ server.get('*', function (req, res) {
 	    parts = auth.split(/:/),                          // split on colon
 	    username = parts[0],
 	    password = parts[1];
+        
+    if (!username || !password) {
+        res.json({ error: 'Not Authorized' });
+        return;
+    }
 
     var url = "https://" + username + ":" + password + "@api.pinboard.in/v1";
 
@@ -24,6 +23,8 @@ server.get('*', function (req, res) {
         url: url + req.path
     }, function (error, response, body) {
         parser.toJson(body, function (x, obj) {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "X-Requested-With");
 			res.json(obj);
 		});
     });
