@@ -22,6 +22,7 @@ server.get('*', function (req, res) {
     request({
         url: url + req.path
     }, function (error, response, body) {
+        console.log(body);
         parser.toJson(body, function (x, obj) {
             res.header("Access-Control-Allow-Origin", "*");
             res.header("Access-Control-Allow-Headers", "X-Requested-With");
