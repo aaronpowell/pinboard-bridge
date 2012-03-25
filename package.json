@@ -1,0 +1,10 @@
+{
+    "private": "true",
+	"name": "pinboard-bridge",
+	"version": "1.0.0",
+	"dependencies": {
+		"sax2json": "*",
+		"request": ">=2.0.0",
+		"express": ">=2.5"
+	}
+}
