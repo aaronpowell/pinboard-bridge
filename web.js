@@ -5,10 +5,10 @@ var //pinboard = require('pinboard'),
 	server = express.createServer();
 
 server.all('*', function (req, res, next) {
-   res.header("Access-Control-Allow-Origin", "*");
-   res.header("Access-Control-Allow-Headers", "Content-Type, X-Requested-With, X-HTTP-Method-Override, Origin, Accept, Authorization");
-   res.header("Access-Control-Allow-Credentials", "true");
-   res.header("Access-Control-Allow-Method", "GET");
+   res.header('Access-Control-Allow-Origin', '*');
+   res.header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, X-HTTP-Method-Override, Origin, Accept, Authorization');
+   res.header('Access-Control-Allow-Credentials', 'true');
+   res.header('Access-Control-Allow-Method', 'GET');
    next();
 });
 
@@ -25,10 +25,16 @@ server.get('*', function (req, res) {
         return;
     }
 
-    var url = "https://" + username + ":" + password + "@api.pinboard.in/v1";
+    var url = 'https://' + username + ':' + password + '@api.pinboard.in/v1' + req.path + '?';
+
+    var query = req.query;
+
+    for (var key in query) {
+        url = url + key + '=' + query[key] + '&';
+    }
 
     request({
-        url: url + req.path
+        url: url
     }, function (error, response, body) {
         parser.toJson(body, function (x, obj) {
 			res.json(obj);
