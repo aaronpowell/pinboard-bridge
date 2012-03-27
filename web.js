@@ -30,15 +30,22 @@ server.get('*', function (req, res) {
     var query = req.query;
 
     for (var key in query) {
+        if (!Object.prototype.hasOwnProperty.call(query, key)) {
+            continue;
+        }
         url = url + key + '=' + query[key] + '&';
     }
 
     request({
         url: url
     }, function (error, response, body) {
-        parser.toJson(body, function (x, obj) {
-			res.json(obj);
-		});
+        if (response.statusCode !== 200) {
+          res.send(body, response.statusCode);
+        } else {
+          parser.toJson(body, function (x, obj) {
+            res.json(obj);
+          });          
+        }
     });
 });
 

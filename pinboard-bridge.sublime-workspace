@@ -11,7 +11,7 @@
 			"file": "web.js",
 			"settings":
 			{
-				"buffer_size": 1027,
+				"buffer_size": 1552,
 				"line_ending": "Windows",
 				"name": "var pinboard = require('pinboard');"
 			}
@@ -20,7 +20,31 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 158,
+				"buffer_size": 234,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "node_modules/sax2json/lib/sax2json.js",
+			"settings":
+			{
+				"buffer_size": 2509,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "$.ajax({\n  type: 'get',\n  beforeSend: function (xhr) {\n  	var base64 = Base64.encode('aaronpowell:8HRZTzTE4h7zCMVh');\n	xhr.setRequestHeader(\"Authorization\", \"Basic \" + base64);\n        xhr.withCredentials = true;\n  },\n  url: 'http://localhost:1337/posts/all',\n  success: function () { console.log(arguments); }\n})",
+			"settings":
+			{
+				"buffer_size": 313,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/settings.js",
+			"settings":
+			{
+				"buffer_size": 1512,
 				"line_ending": "Windows"
 			}
 		}
@@ -28,9 +52,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 58.0,
+		"height": 150.0,
 		"selected_items":
 		[
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"json",
 				"Set Syntax: JSON"
@@ -57,6 +85,22 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Aaron/Downloads/Search sample/JavaScript/program.js",
+		"/C/Users/Aaron/Downloads/Search sample/JavaScript/default.html",
+		"/D/_Projects/github/Pinboard/.gitignore",
+		"/D/_Projects/github/Pinboard/readme.md",
+		"/C/Users/Aaron/Downloads/WinJS Promise sample/JavaScript/scenarios/createAsyncPromise.js",
+		"/C/Users/Aaron/Downloads/WinJS Promise sample/JavaScript/scenarios/promiseAny.js",
+		"/C/Users/Aaron/Downloads/WinJS Promise sample/JavaScript/program.js",
+		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/containers.js",
+		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/images.js",
+		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/files.js",
+		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/compositeSettings.js",
+		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/default.js",
+		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/roaming.js",
+		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/settings.js",
+		"/D/_Projects/hg01.codeplex.com/clientdependency/ClientDependency.Core/CompositeFiles/Providers/PathBasedUrlFormatter.cs",
+		"/D/_Projects/github/pinboard-bridge/tmp.xml",
 		"/D/_Projects/github/wdyk/.git/config",
 		"/D/_Projects/github/wdyk/Procfile",
 		"/D/_Projects/github/pinboard-bridge/package.json",
@@ -76,7 +120,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -90,6 +134,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"",
+			"isAr",
 			"  "
 		],
 		"highlight": true,
@@ -98,6 +144,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -108,7 +155,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -116,24 +163,26 @@
 					"file": "web.js",
 					"settings":
 					{
-						"buffer_size": 1027,
+						"buffer_size": 1552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								1027
+								526,
+								526
 							]
 						],
 						"settings":
 						{
 							"auto_name": "var pinboard = require('pinboard');",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 57.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -143,7 +192,7 @@
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 158,
+						"buffer_size": 234,
 						"regions":
 						{
 						},
@@ -151,7 +200,7 @@
 						[
 							[
 								0,
-								158
+								0
 							]
 						],
 						"settings":
@@ -160,6 +209,87 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "node_modules/sax2json/lib/sax2json.js",
+					"settings":
+					{
+						"buffer_size": 2509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								162
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/settings.js",
+					"settings":
+					{
+						"buffer_size": 1512,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1022,
+								1022
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -200,7 +330,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
