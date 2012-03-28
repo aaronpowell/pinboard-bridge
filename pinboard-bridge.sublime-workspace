@@ -11,7 +11,7 @@
 			"file": "web.js",
 			"settings":
 			{
-				"buffer_size": 1552,
+				"buffer_size": 1698,
 				"line_ending": "Windows",
 				"name": "var pinboard = require('pinboard');"
 			}
@@ -37,14 +37,6 @@
 			"settings":
 			{
 				"buffer_size": 313,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/settings.js",
-			"settings":
-			{
-				"buffer_size": 1512,
 				"line_ending": "Windows"
 			}
 		}
@@ -85,6 +77,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/settings.js",
 		"/C/Users/Aaron/Downloads/Search sample/JavaScript/program.js",
 		"/C/Users/Aaron/Downloads/Search sample/JavaScript/default.html",
 		"/D/_Projects/github/Pinboard/.gitignore",
@@ -98,7 +91,6 @@
 		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/compositeSettings.js",
 		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/default.js",
 		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/roaming.js",
-		"/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/settings.js",
 		"/D/_Projects/hg01.codeplex.com/clientdependency/ClientDependency.Core/CompositeFiles/Providers/PathBasedUrlFormatter.cs",
 		"/D/_Projects/github/pinboard-bridge/tmp.xml",
 		"/D/_Projects/github/wdyk/.git/config",
@@ -155,7 +147,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -163,15 +155,15 @@
 					"file": "web.js",
 					"settings":
 					{
-						"buffer_size": 1552,
+						"buffer_size": 1698,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								526,
-								526
+								1516,
+								1516
 							]
 						],
 						"settings":
@@ -182,7 +174,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 57.0,
+						"translation.y": 252.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -262,34 +254,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/Aaron/Downloads/Application data sample/JavaScript/js/settings.js",
-					"settings":
-					{
-						"buffer_size": 1512,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1022,
-								1022
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
