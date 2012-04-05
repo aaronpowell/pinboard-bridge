@@ -33,7 +33,7 @@ server.get('*', function (req, res) {
         if (!Object.prototype.hasOwnProperty.call(query, key)) {
             continue;
         }
-        url = url + key + '=' + query[key] + '&';
+        url = url + key + '=' + encodeURIComponent(query[key]) + '&';
     }
 
     request({
