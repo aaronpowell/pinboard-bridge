@@ -18,14 +18,17 @@ server.get('*', function (req, res) {
 	    auth = new Buffer(token, 'base64').toString(),    // convert from base64
 	    parts = auth.split(/:/),                          // split on colon
 	    username = parts[0],
-	    password = parts[1];
-        
-    if (!username || !password) {
+	    password = parts[1],
+      newApi = req.query['auth_token'];
+
+    if ((!username || !password) && !newApi) {
         res.json({ error: 'Not Authorized' });
         return;
+    } else if (!newApi) {
+        username = username + ':' + password + '@'
     }
 
-    var url = 'https://' + username + ':' + password + '@api.pinboard.in/v1' + req.path + '?';
+    var url = 'https://' + username + 'api.pinboard.in/v1' + req.path + '?';
 
     var query = req.query;
 
