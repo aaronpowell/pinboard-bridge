@@ -45,9 +45,13 @@ server.get('*', function (req, res) {
         if (response.statusCode !== 200) {
           res.send(body, response.statusCode);
         } else {
-          parser.toJson(body, function (x, obj) {
-            res.json(obj);
-          });          
+          if (req.query['format'] === 'json') {
+              res.json(JSON.parse(body));
+          } else {
+            parser.toJson(body, function (x, obj) {
+              res.json(obj);
+            });            
+          }          
         }
     });
 });
